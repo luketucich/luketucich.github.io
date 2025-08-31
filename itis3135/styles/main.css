@@ -22,7 +22,8 @@
   --text-md: 1.5rem;
   --text-lg: 2rem;
 
-  --title-color: #4ea1ff;
+  --title-color: #0577fa;
+  --tagline-color: #5a8fd8;
   --link-color: #fff34e;
   --max-width: 55ch;
 
@@ -49,7 +50,8 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Bungee", "Comfortaa", system-ui, Arial, sans-serif;
   font-weight: 700;
 }
@@ -186,6 +188,14 @@ section {
   margin: var(--gap-lg) auto;
 }
 
+/* Short Divider */
+.divider-short {
+  width: 30%;
+  border: none;
+  border-top: 0.07rem solid var(--border);
+  margin: var(--gap-md) auto;
+}
+
 /* Buttons */
 .button-sm,
 .button-md,
@@ -220,6 +230,29 @@ section {
   background: var(--button-hover);
 }
 
+/* Attribution */
+.attribution {
+  color: var(--secondary-text);
+  font-style: italic;
+  font-size: 0.7rem;
+  margin: 0.1rem 0 1.2rem 0;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* Tagline */
+.tagline {
+  color: var(--primary-text);
+  font-size: 0.95rem;
+  font-style: normal;
+  margin: 0.2rem 0 0.5rem 0;
+  text-align: center;
+  max-width: var(--max-width);
+  font-weight: 400;
+  opacity: 0.9;
+  letter-spacing: 0.2px;
+}
+
 /* Footer */
 .site-footer {
   flex-shrink: 0;
@@ -252,6 +285,29 @@ section {
   padding: 0.3rem 0.6rem;
   font-size: 0.9rem;
   border-radius: 0.35rem;
+}
+
+/* Navigation Button */
+.button-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--button);
+  border: 0.07rem solid var(--border);
+  border-radius: 0.4rem;
+  color: var(--primary-text);
+  transition: background 0.2s, border-color 0.2s;
+  text-align: center;
+  min-width: 8rem;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.button-nav:hover {
+  background: var(--button-hover);
+  border-color: var(--title-color);
 }
 
 /* Mobile / Tablet tweaks */

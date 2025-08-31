@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Luke Tucich | Home</title>
+    <title>luke tucich | welcome</title>
     <script
       src="https://lint.page/kit/4d0fe3.js"
       crossorigin="anonymous"
@@ -33,7 +33,8 @@
         --text-md: 1.5rem;
         --text-lg: 2rem;
 
-        --title-color: #4ea1ff;
+        --title-color: #0577fa;
+        --tagline-color: #5a8fd8;
         --link-color: #fff34e;
         --max-width: 55ch;
 
@@ -60,7 +61,8 @@
       }
 
       h1,
-      h2 {
+      h2,
+      h3 {
         font-family: "Bungee", "Comfortaa", system-ui, Arial, sans-serif;
         font-weight: 700;
       }
@@ -197,6 +199,14 @@
         margin: var(--gap-lg) auto;
       }
 
+      /* Short Divider */
+      .divider-short {
+        width: 30%;
+        border: none;
+        border-top: 0.07rem solid var(--border);
+        margin: var(--gap-md) auto;
+      }
+
       /* Buttons */
       .button-sm,
       .button-md,
@@ -229,6 +239,29 @@
       .button-md:hover,
       .button-lg:hover {
         background: var(--button-hover);
+      }
+
+      /* Attribution */
+      .attribution {
+        color: var(--secondary-text);
+        font-style: italic;
+        font-size: 0.7rem;
+        margin: 0.1rem 0 1.2rem 0;
+        opacity: 0.6;
+        text-align: center;
+      }
+
+      /* Tagline */
+      .tagline {
+        color: var(--primary-text);
+        font-size: 0.95rem;
+        font-style: normal;
+        margin: 0.2rem 0 0.5rem 0;
+        text-align: center;
+        max-width: var(--max-width);
+        font-weight: 400;
+        opacity: 0.9;
+        letter-spacing: 0.2px;
       }
 
       /* Footer */
@@ -311,6 +344,29 @@
           padding: 0.35rem 0.5rem;
         }
       }
+
+      /* Navigation Button */
+      .button-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background: var(--button);
+        border: 0.07rem solid var(--border);
+        border-radius: 0.4rem;
+        color: var(--primary-text);
+        transition: background 0.2s, border-color 0.2s;
+        text-align: center;
+        min-width: 8rem;
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+      }
+      .button-nav:hover {
+        background: var(--button-hover);
+        border-color: var(--title-color);
+      }
     </style>
   </head>
   <body>
@@ -321,9 +377,6 @@
         <nav class="nav-bar">
           <ul>
             <li><a href="index.html">home</a></li>
-            <li><a href="itis3135/index.html">coursework</a></li>
-            <li><a href="itis3135/introduction.html">about me</a></li>
-            <li><a href="itis3135/contract.html">contract</a></li>
           </ul>
         </nav>
       </div>
@@ -332,19 +385,32 @@
     <!-- Main -->
     <main class="page-centered">
       <section>
-        <h2 class="text-lg title">home</h2>
+        <h2 class="text-lg title">welcome</h2>
+
+        <hr class="divider-short" />
+
         <img
           class="img-lg"
           src="itis3135/images/retro-luke.png"
           alt="drawing of me programming at a desk"
         />
         <p class="paragraph centered">
-          welcome to my personal website! explore my coursework, learn more
-          about me, or check out my contract for this class.
+          welcome! this site was created for my itis-3135 (front-end web app
+          development) course. this page is my personal home base, where i'll
+          add more about me, updates, and whatever i'm working on. if you're
+          here for the class, click the “itis-3135” button to open the class
+          homepage—there you can view my assignments/projects, a short about-me,
+          and my class contract.
         </p>
         <p class="paragraph centered">
-          this site was built with html and css, and is hosted on github pages.
+          built with html + css and hosted on github pages.
         </p>
+
+        <hr class="divider" />
+
+        <div style="margin-top: var(--gap-lg); margin-bottom: var(--gap-lg)">
+          <a href="itis3135/index.html" class="button-nav">view coursework</a>
+        </div>
       </section>
     </main>
 
