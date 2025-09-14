@@ -318,6 +318,77 @@ section {
   text-align: center;
 }
 
+/* Project Cards */
+.projects-container {
+  margin: var(--gap-lg) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  justify-content: center;
+  width: 100%;
+}
+
+.project-card {
+  background: var(--button);
+  padding: var(--pad-lg);
+  border-radius: 0.4rem;
+  border: 0.07rem solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-width: 280px;
+  max-width: 320px;
+  flex: 1;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  color: var(--primary-text);
+  margin-bottom: var(--gap-sm);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.project-card p {
+  margin-bottom: var(--gap-md);
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  line-height: 1.4;
+}
+
+.project-card .button {
+  font-size: 0.85rem;
+  padding: var(--pad-sm) var(--pad-md);
+}
+
+.project-card .disabled {
+  font-size: 0.85rem;
+  padding: var(--pad-sm) var(--pad-md);
+  color: var(--secondary-text);
+  border: 0.07rem solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--bg);
+  display: inline-block;
+  opacity: 0.6;
+}
+
+/* Card color variants */
+.card-blue {
+  border-top: 0.2rem solid #0577fa;
+}
+
+.card-red {
+  border-top: 0.2rem solid #e53e3e;
+}
+
+.card-green {
+  border-top: 0.2rem solid #38a169;
+}
+
 /* Mobile / Tablet tweaks */
 @media (max-width: 720px) {
   .nav-container {
