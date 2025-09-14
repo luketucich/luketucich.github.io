@@ -310,6 +310,14 @@ section {
   border-color: var(--title-color);
 }
 
+/* Page Built By */
+.page-built-by {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 /* Mobile / Tablet tweaks */
 @media (max-width: 720px) {
   .nav-container {
