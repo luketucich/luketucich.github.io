@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>luke tucich | welcome</title>
+    <title>Luke Tucich | Welcome</title>
     <script
       src="https://lint.page/kit/4d0fe3.js"
       crossorigin="anonymous"
     ></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Comfortaa:wght@300..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
 
       :root {
-        --bg: #0c0c0c;
-        --primary-text: #e0e0e0;
-        --secondary-text: #afafaf;
-        --button: #1a1a1a;
-        --button-hover: #2a2a2a;
-        --border: #444;
+        --bg: #f0f4f0;
+        --primary-text: #2d4a2d;
+        --secondary-text: #5a6b5a;
+        --button: #7a8f7a;
+        --button-hover: #6a7f6a;
+        --border: #a8b8a8;
 
         /* spacing + padding scale */
         --gap-sm: 0.5rem;
@@ -33,9 +33,9 @@
         --text-md: 1.5rem;
         --text-lg: 2rem;
 
-        --title-color: #0577fa;
-        --tagline-color: #5a8fd8;
-        --link-color: #fff34e;
+        --title-color: #4a6741;
+        --tagline-color: #6b7c6b;
+        --link-color: #5a6b5a;
         --max-width: 55ch;
 
         /* layout helpers */
@@ -47,9 +47,11 @@
       body {
         margin: 0;
         padding: 0;
-        background: var(--bg);
+        background: linear-gradient(135deg, var(--bg) 0%, #e8f0e8 100%);
         color: var(--primary-text);
-        font-family: "Comfortaa", system-ui, Arial, sans-serif;
+        font-family: "Source Sans Pro", system-ui, Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
       }
       body {
         min-height: 100vh;
@@ -63,8 +65,22 @@
       h1,
       h2,
       h3 {
-        font-family: "Bungee", "Comfortaa", system-ui, Arial, sans-serif;
-        font-weight: 700;
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: var(--primary-text);
+      }
+
+      p {
+        font-family: "Source Sans Pro", system-ui, Arial, sans-serif;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      /* Brand logo exception */
+      .brand {
+        color: var(--primary-text);
+        font-weight: 400;
       }
 
       /* Navbar */
@@ -73,10 +89,11 @@
         top: 0;
         left: 0;
         right: 0;
-        background: var(--bg);
-        border-bottom: 0.07rem solid var(--border);
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
         height: var(--header-h);
         z-index: 10;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
       }
       .nav-inner {
         height: 100%;
@@ -108,8 +125,9 @@
         background: var(--button);
         border: 0.07rem solid var(--border);
         border-radius: 0.4rem;
-        color: var(--primary-text);
+        color: var(--bg);
         font-size: 0.95rem;
+        font-weight: 400;
         transition: background 0.2s, border-color 0.2s;
         line-height: 1;
       }
@@ -125,7 +143,13 @@
         justify-content: flex-start;
         padding: var(--pad-lg);
         margin-top: calc(var(--header-h) + 1rem);
-        animation: fadeIn 0.4s ease-in;
+        animation: fadeIn 0.6s ease-in;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       @keyframes fadeIn {
         from {
@@ -179,8 +203,20 @@
         height: auto;
       }
       .img-lg {
-        width: 20rem;
+        width: 28rem;
         height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 0.5rem;
+      }
+
+      .img-caption {
+        font-size: 0.9rem;
+        color: var(--secondary-text);
+        font-style: italic;
+        text-align: center;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
       }
 
       /* Sections */
@@ -217,11 +253,22 @@
         text-decoration: none;
         background: var(--button);
         border: 0.07rem solid var(--border);
-        border-radius: 0.4rem;
-        color: var(--primary-text);
-        transition: background 0.2s, border-color 0.2s;
+        border-radius: 12px;
+        color: var(--bg);
+        font-weight: 400;
+        transition: all 0.3s ease;
         text-align: center;
         min-width: 6rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button-sm:hover,
+      .button-md:hover,
+      .button-lg:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
       }
       .button-sm {
         font-size: var(--text-sm);
@@ -267,7 +314,6 @@
       /* Footer */
       .site-footer {
         flex-shrink: 0;
-        border-top: 0.07rem solid var(--border);
         color: var(--secondary-text);
         font-size: 0.9rem;
         padding: 0.6rem var(--pad-md);
@@ -353,19 +399,22 @@
         text-decoration: none;
         background: var(--button);
         border: 0.07rem solid var(--border);
-        border-radius: 0.4rem;
-        color: var(--primary-text);
-        transition: background 0.2s, border-color 0.2s;
+        border-radius: 12px;
+        color: var(--bg);
+        transition: all 0.3s ease;
         text-align: center;
         min-width: 8rem;
         font-size: 0.95rem;
         padding: 0.6rem 1.2rem;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 0.3px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
       .button-nav:hover {
         background: var(--button-hover);
         border-color: var(--title-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
       }
 
       /* Page Built By */
@@ -381,10 +430,10 @@
     <!-- Header -->
     <header class="nav-container">
       <div class="nav-inner">
-        <h1 class="brand">luke tucich</h1>
+        <h1 class="brand">Luke Tucich</h1>
         <nav class="nav-bar">
           <ul>
-            <li><a href="index.html">home</a></li>
+            <li><a href="index.html">Home</a></li>
           </ul>
         </nav>
       </div>
@@ -393,30 +442,36 @@
     <!-- Main -->
     <main class="page-centered">
       <section>
-        <h2 class="text-lg title">welcome</h2>
+        <h2 class="text-lg title">Welcome</h2>
 
         <hr class="divider-short" />
 
         <img
           class="img-lg"
-          src="itis3135/images/retro-luke.png"
-          alt="drawing of me programming at a desk"
+          src="itis3135/images/blue-ridge-mountains.png"
+          alt="Blue Ridge Mountains landscape"
         />
-        <p class="paragraph centered">
-          welcome! this is my personal homepage for my ITIS-3135 (front-end web
-          app development) course. this page serves as my home base where i'll
-          share updates, projects, and personal content. if you're here for the
-          course requirements, click the button below to view my coursework page
-          with assignments, about me, and course contract.
+        <p class="img-caption">
+          Photo taken Summer 2025 in the Blue Ridge Mountains
         </p>
         <p class="paragraph centered">
-          built with html + css and hosted on github pages.
+          Hey, I'm Luke! Welcome to my personal webpage, where I hope to share
+          some of my projects and thoughts. My hobbies include weightlifting,
+          rock climbing, cooking, chess, mountain biking, and of course,
+          programming. I've been programming since March 2024, starting out with
+          The Odin Project, and now I'm learning Go with boot.dev. I'm also
+          excited to start my software engineering internship at Walmart this
+          summer 2026!
+        </p>
+        <p class="paragraph centered">
+          The link below will take you to some of the work I'm doing in my
+          front-end web development class ITIS-3135 at Charlotte.
         </p>
 
         <hr class="divider" />
 
         <div style="margin-top: var(--gap-lg); margin-bottom: var(--gap-lg)">
-          <a href="itis3135/index.html" class="button-nav">view coursework</a>
+          <a href="itis3135/index.html" class="button-nav">View Coursework</a>
         </div>
       </section>
     </main>
@@ -424,19 +479,19 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-inner">
-        <span class="footer-label">quick links</span>
+        <span class="footer-label">Quick Links</span>
         <nav class="footer-links">
           <a
             target="_blank"
             href="https://github.com/luketucich/"
             class="button-sm"
-            >github</a
+            >GitHub</a
           >
           <a
             target="_blank"
             href="https://www.linkedin.com/in/luketucich/"
             class="button-sm"
-            >linkedin</a
+            >LinkedIn</a
           >
         </nav>
       </div>
