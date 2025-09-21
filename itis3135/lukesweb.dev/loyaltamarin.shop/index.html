@@ -62,34 +62,53 @@
 
       .nav-left a:hover {
         color: var(--color-accent);
-      }
-
-      .nav-left *:hover {
         cursor: pointer;
-        color: var(--color-accent);
       }
 
-      .logo {
+      .nav-right {
         display: flex;
         justify-content: center;
+      }
+
+      .logo a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+
+      .logo h1 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
 
       .logo img {
         height: 3.75rem;
         width: auto;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .logo img:hover {
+        cursor: pointer;
+        transform: scale(1.05);
       }
 
       .icon {
         font-size: 1.5rem;
         color: var(--color-text);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
       }
 
       .icon:hover {
-        cursor: pointer;
         color: var(--color-accent);
+        cursor: pointer;
       }
 
       main {
@@ -119,7 +138,6 @@
 
       footer p {
         margin: 0.5rem 0;
-        color: var(--color-text-light);
       }
 
       .tagline {
@@ -136,14 +154,14 @@
         }
 
         .nav-left {
-          order: 1;
-        }
-
-        .logo {
           order: 2;
         }
 
-        .icon {
+        .logo {
+          order: 1;
+        }
+
+        .nav-right {
           order: 3;
         }
 
@@ -157,14 +175,19 @@
     <header>
       <div class="nav-left">
         <a href="index.html">Shop</a>
-        <a href="about.html">About</a>
+        <a href="index.html">About</a>
       </div>
 
       <div class="logo">
-        <img src="images/logo.png" alt="Loyal Tamarin Logo" />
+        <a href="index.html">
+          <h1>Loyal Tamarin</h1>
+          <img src="images/logo.png" alt="Loyal Tamarin Logo" />
+        </a>
       </div>
 
-      <span class="icon material-icons">shopping_cart</span>
+      <div class="nav-right">
+        <span class="icon material-icons">shopping_cart</span>
+      </div>
     </header>
 
     <main>
