@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loyal Tamarin | Snacks That Swing!</title>
-    <meta name="description" content="Loyal Tamarin - Snacks That Swing!" />
+    <title>Loyal Tamarin | Our Story</title>
+    <meta name="description" content="Loyal Tamarin - Our Story" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -269,6 +269,70 @@
         font-size: 0.95rem;
       }
 
+      .about-hero {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .about-logo {
+        height: 120px;
+        margin-bottom: 1rem;
+      }
+
+      .about-tagline {
+        font-size: 1.2rem;
+        color: var(--color-primary);
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+
+      .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .about-section h3 {
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .about-section p {
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .value-card {
+        text-align: center;
+        padding: 1.5rem;
+        background: var(--color-secondary);
+        border-radius: 1rem;
+      }
+
+      .value-icon {
+        font-size: 2rem;
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+      }
+
+      .value-title {
+        color: var(--color-text);
+        margin-bottom: 0.5rem;
+      }
+
+      .value-desc {
+        font-size: 0.9rem;
+        color: var(--color-text);
+      }
+
       @media (max-width: 768px) {
         header {
           display: flex;
@@ -341,76 +405,62 @@
     </header>
 
     <main>
-      <div class="hero-section">
-        <div class="hero-left">
-          <h2 class="hero-title">Snacks That Swing!</h2>
-          <p class="hero-subtitle">
-            From the playful spirit of tamarin monkeys comes our collection of
-            healthy, tropical-inspired snacks. Each bite brings the energy and
-            joy of the jungle to your daily nutrition.
-          </p>
-        </div>
-        <div class="hero-right">
-          <div class="chip-bags">
-            <img
-              src="images/chips_mango.png"
-              alt="Mango Chips"
-              class="hero-chip hero-chip-1"
-            />
-            <img
-              src="images/chips_tamarind.png"
-              alt="Tamarind Chips"
-              class="hero-chip hero-chip-2"
-            />
-            <img
-              src="images/chips_coconut.png"
-              alt="Coconut Chips"
-              class="hero-chip hero-chip-3"
-            />
-          </div>
-        </div>
-      </div>
-
       <div class="content-section">
-        <h2>Our Promises</h2>
+        <h2>Our Story</h2>
 
-        <div class="promises-grid">
-          <div class="promise-card">
-            <h3>
-              <span class="material-icons">eco</span> Sustainable Sourcing
-            </h3>
+        <div class="about-hero">
+          <img
+            src="images/logo.png"
+            alt="Loyal Tamarin Logo"
+            class="about-logo"
+          />
+          <p class="about-tagline">Snacks That Swing!</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-section">
+            <h3>Our Story</h3>
             <p>
-              We work with farms that use good farming practices to grow our
-              ingredients naturally.
+              Loyal Tamarin started with a love for real flavors and good
+              farming. Our grandparents used to make amazing plantain chips, and
+              we wanted to bring that same love for flavors to the world.
             </p>
           </div>
 
-          <div class="promise-card">
-            <h3>
-              <span class="material-icons">block</span> No Artificial Additives
-            </h3>
+          <div class="about-section">
+            <h3>Our Mission</h3>
             <p>
-              Our chips are made with only natural ingredients. No fake flavors
-              or chemicals.
+              Great snacks should taste good and help people. We work with local
+              farmers to get the best tamarind and tropical fruits.
             </p>
           </div>
 
-          <div class="promise-card">
-            <h3>
-              <span class="material-icons">public</span> Fair Trade Promise
-            </h3>
-            <p>We make sure farmers and workers get fair pay for their work.</p>
+          <div class="about-section">
+            <h3>Our Promise</h3>
+            <p>
+              Every bag shows our promise: quality, sustainability, and keeping
+              old recipes alive for future generations.
+            </p>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="material-icons value-icon">eco</span>
+            <h4 class="value-title">Sustainable</h4>
+            <p class="value-desc">Eco-friendly practices</p>
           </div>
 
-          <div class="promise-card">
-            <h3>
-              <span class="material-icons">recycling</span> Eco-Friendly
-              Packaging
-            </h3>
-            <p>
-              Our bags are made from materials that can be recycled to help the
-              environment.
-            </p>
+          <div class="value-card">
+            <span class="material-icons value-icon">star</span>
+            <h4 class="value-title">Quality</h4>
+            <p class="value-desc">Premium ingredients</p>
+          </div>
+
+          <div class="value-card">
+            <span class="material-icons value-icon">groups</span>
+            <h4 class="value-title">Community</h4>
+            <p class="value-desc">Supporting local farmers</p>
           </div>
         </div>
       </div>
