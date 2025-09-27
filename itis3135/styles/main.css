@@ -54,6 +54,9 @@ h2,
 h3 {
   font-family: "Bungee", "Comfortaa", system-ui, Arial, sans-serif;
   font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: var(--gap-sm);
+  font-size: 1.1rem;
 }
 
 /* Navbar */
@@ -436,13 +439,6 @@ section {
 .project-card:hover {
   background: var(--button-hover);
   transform: translateY(-2px);
-}
-
-.project-card h3 {
-  color: var(--primary-text);
-  margin-bottom: var(--gap-sm);
-  font-size: 1.1rem;
-  font-weight: 700;
 }
 
 .project-card p {
