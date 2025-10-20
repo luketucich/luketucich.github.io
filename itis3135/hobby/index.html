@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Chess | Luke Tucich</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        line-height: 1.6;
+        padding: 2.5rem;
+        max-width: 75rem;
+        margin: 0 auto;
+        background-color: #f5f0e8;
+        color: #2c1a0e;
+      }
+
+      a {
+        color: #5a381f;
+      }
+
+      header {
+        margin-bottom: 1.25rem;
+        border-bottom: 1px solid #c19a6b;
+        padding-bottom: 0.625rem;
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #5a381f;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 0.625rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #a0785a;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-color: #e8d1b0;
+        color: #5a381f;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      nav a:hover,
+      nav a.active {
+        background-color: #a0785a;
+        color: #fff;
+      }
+
+      .section {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .section.active {
+        display: block;
+        opacity: 1;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.9375rem;
+        color: #5a381f;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 0.625rem;
+        color: #7a3e11;
+      }
+
+      p {
+        margin-bottom: 0.625rem;
+      }
+
+      .content-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .content-card {
+        flex: 1 1 15.625rem;
+        background-color: #fff;
+        padding: 0.9375rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(160, 120, 90, 0.15);
+        transition: transform 0.2s ease;
+      }
+
+      .content-card:hover {
+        transform: translateY(-2px);
+      }
+
+      figure {
+        margin: 1.25rem 0;
+        text-align: center;
+      }
+
+      figure img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(160, 120, 90, 0.25);
+      }
+
+      figcaption {
+        font-style: italic;
+        margin-top: 0.3125rem;
+        color: #5a381f;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0.9375rem 0;
+        border-radius: 0.75rem;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        border: 1px solid #c19a6b;
+        padding: 0.5rem;
+        text-align: left;
+      }
+
+      th {
+        background-color: #a0785a;
+        color: #fff;
+      }
+
+      td {
+        background-color: #e8d1b0;
+      }
+
+      ul,
+      ol {
+        margin: 0.9375rem 0;
+        padding-left: 1.25rem;
+      }
+
+      li {
+        margin-bottom: 0.3125rem;
+      }
+
+      footer {
+        margin-top: 1.875rem;
+        border-top: 1px solid #c19a6b;
+        padding-top: 0.9375rem;
+        text-align: center;
+        color: #5a381f;
+      }
+
+      .validation-buttons {
+        margin-bottom: 0.625rem;
+      }
+
+      .validation-buttons a {
+        margin: 0 0.3125rem;
+        text-decoration: none;
+        padding: 0.3125rem 0.625rem;
+        border: 1px solid #a0785a;
+        border-radius: 0.5rem;
+        background-color: #e8d1b0;
+        color: #5a381f;
+        transition: background-color 0.3s ease;
+      }
+
+      .validation-buttons a:hover {
+        background-color: #a0785a;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <h1>All About Chess</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="nav-link active" data-section="what">What</a>
+            </li>
+            <li><a href="#" class="nav-link" data-section="who">Who</a></li>
+            <li><a href="#" class="nav-link" data-section="when">When</a></li>
+            <li><a href="#" class="nav-link" data-section="where">Where</a></li>
+            <li><a href="#" class="nav-link" data-section="how">How</a></li>
+            <li><a href="#" class="nav-link" data-section="why">Why</a></li>
+            <li>
+              <a href="#" class="nav-link" data-section="ai-prompts"
+                >AI Prompts</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="what" class="section active">
+        <h2>What is Chess?</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Strategic Board Game</h3>
+            <p>
+              Chess is a two-player strategy board game played on a checkered
+              board with 64 squares arranged in an 8×8 grid. Each player begins
+              with 16 pieces: one king, one queen, two rooks, two bishops, two
+              knights, and eight pawns. The objective is to checkmate the
+              opponent's king, meaning it is under threat of capture with no
+              legal moves to escape.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Ancient Origins</h3>
+            <p>
+              Chess originated in India around the 6th century as "chaturanga"
+              and evolved through Persia and the Islamic world before reaching
+              Europe. The modern rules were established in the 15th century,
+              making it one of the oldest games still played today.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Mental Exercise</h3>
+            <p>
+              Chess is often called "the game of kings" and is recognized as a
+              sport by the International Olympic Committee. It challenges
+              players to think strategically, plan ahead, and adapt to changing
+              circumstances.
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="images/chess-board-setup.png"
+            alt="A chess board with pieces in starting position"
+            width="300"
+            height="200"
+          />
+          <figcaption>
+            A classic chess board setup showing the initial position of all
+            pieces | AI Prompt: "Create an image of a chess board with all
+            pieces in their starting positions."
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="who" class="section">
+        <h2>Who Am I as a Chess Player?</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>My Chess Journey</h3>
+            <p>
+              I discovered chess during my teenage years and immediately fell in
+              love with the strategic depth and infinite possibilities. What
+              started as casual games with friends has evolved into a serious
+              passion that challenges my mind daily.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Playing Style</h3>
+            <p>
+              I prefer tactical positions over positional play, enjoying the
+              thrill of calculating complex combinations and sacrifices. My
+              favorite openings include the Sicilian Defense with Black and the
+              Italian Game with White.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Learning Philosophy</h3>
+            <p>
+              I believe chess is a lifelong learning process. Every game teaches
+              something new, whether it's a tactical pattern, strategic concept,
+              or psychological insight. I study master games, solve puzzles, and
+              analyze my own games to continuously improve.
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="images/chess-player-thinking.jpg"
+            alt="A person deeply concentrating while playing chess"
+            width="250"
+            height="200"
+          />
+          <figcaption>
+            The intense concentration and focus required during a chess game |
+            AI Prompt: "Create an image of a person deeply concentrating while
+            playing chess."
+          </figcaption>
+        </figure>
+
+        <table>
+          <caption>
+            My Chess Statistics
+          </caption>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Current Rating</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Online Blitz (5+0)</td>
+              <td>1450</td>
+              <td>1600</td>
+            </tr>
+            <tr>
+              <td>Online Rapid (15+10)</td>
+              <td>1580</td>
+              <td>1750</td>
+            </tr>
+            <tr>
+              <td>Classical (30+0)</td>
+              <td>1620</td>
+              <td>1800</td>
+            </tr>
+            <tr>
+              <td>Puzzle Rating</td>
+              <td>1850</td>
+              <td>2000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="when" class="section">
+        <h2>When to Play Chess</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Best Times of Day</h3>
+            <p>
+              I find that early morning and late evening are optimal for chess.
+              My mind is fresh in the morning, making it perfect for tactical
+              puzzles and opening study. Evening games allow me to unwind and
+              process the day's events through strategic thinking.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Seasonal Preferences</h3>
+            <p>
+              Winter months are ideal for intensive chess study and long
+              classical games. The cozy indoor atmosphere enhances
+              concentration. Summer brings more casual blitz games and outdoor
+              chess events at local parks and cafes.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Tournament Schedule</h3>
+            <p>
+              Local tournaments typically run on weekends, with major events
+              during holidays. I prefer Saturday morning tournaments when I'm
+              most alert. Online tournaments offer flexibility, with evening
+              blitz tournaments fitting perfectly into weekday schedules.
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="images/chess-tournament.jpg"
+            alt="A chess tournament in progress with multiple games being played"
+            width="300"
+            height="200"
+          />
+          <figcaption>
+            Competitive chess tournaments provide the ultimate test of skill and
+            nerves | AI Prompt: "Create an image of a chess tournament in
+            progress with multiple games being played."
+          </figcaption>
+        </figure>
+
+        <div class="content-card">
+          <h3>Weekly Chess Schedule</h3>
+          <ul>
+            <li>
+              <strong>Monday:</strong> Tactical puzzles and opening study (1
+              hour)
+            </li>
+            <li><strong>Tuesday:</strong> Online blitz games (30 minutes)</li>
+            <li>
+              <strong>Wednesday:</strong> Endgame study and master game analysis
+              (45 minutes)
+            </li>
+            <li>
+              <strong>Thursday:</strong> Rapid games and position evaluation (1
+              hour)
+            </li>
+            <li>
+              <strong>Friday:</strong> Casual games with friends or online
+              community (1.5 hours)
+            </li>
+            <li>
+              <strong>Saturday:</strong> Classical games or tournament play (2-3
+              hours)
+            </li>
+            <li>
+              <strong>Sunday:</strong> Review week's games and plan next week's
+              study (1 hour)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="where" class="section">
+        <h2>Where to Play Chess</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Online Platforms</h3>
+            <p>
+              Chess.com and Lichess.org are my go-to platforms for online play.
+              Chess.com offers excellent learning tools and a large player base,
+              while Lichess provides free analysis tools and a clean interface.
+              Both platforms have mobile apps for games on the go.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Local Chess Clubs</h3>
+            <p>
+              Charlotte has several active chess clubs including the Charlotte
+              Chess Center and local library meetups. These provide
+              opportunities for over-the-board play, tournaments, and learning
+              from stronger players. The community aspect makes chess more
+              enjoyable and motivating.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Parks and Cafes</h3>
+            <p>
+              Outdoor chess at parks like Freedom Park offers a relaxed
+              atmosphere for casual games. Local cafes with chess boards create
+              perfect settings for friendly matches and chess discussions. The
+              change of environment often leads to creative play.
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="images/outdoor-chess.jpg"
+            alt="People playing chess outdoors in a park setting"
+            width="300"
+            height="200"
+          />
+          <figcaption>
+            Outdoor chess games bring the ancient game into beautiful natural
+            settings | AI Prompt: "Create an image of people playing chess
+            outdoors in a park setting."
+          </figcaption>
+        </figure>
+
+        <table>
+          <caption>
+            Top Chess Locations in Charlotte
+          </caption>
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Type</th>
+              <th>Best For</th>
+              <th>Schedule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Charlotte Chess Center</td>
+              <td>Club</td>
+              <td>Tournaments & Lessons</td>
+              <td>Tuesday & Thursday evenings</td>
+            </tr>
+            <tr>
+              <td>Freedom Park</td>
+              <td>Outdoor</td>
+              <td>Casual Games</td>
+              <td>Weekends, weather permitting</td>
+            </tr>
+            <tr>
+              <td>Local Libraries</td>
+              <td>Community</td>
+              <td>Beginners & Families</td>
+              <td>Various times</td>
+            </tr>
+            <tr>
+              <td>UNCC Campus</td>
+              <td>Academic</td>
+              <td>Student Games</td>
+              <td>Student organization events</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="how" class="section">
+        <h2>How to Improve at Chess</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Study Fundamentals</h3>
+            <p>
+              Master the basic principles: control the center, develop pieces
+              quickly, castle early, and don't move the same piece twice in the
+              opening. Understanding these fundamentals provides a solid
+              foundation for more advanced concepts.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Tactical Training</h3>
+            <p>
+              Solve puzzles daily to improve pattern recognition. Start with
+              simple tactics like forks, pins, and skewers, then progress to
+              complex combinations. Consistent puzzle solving is one of the
+              fastest ways to improve your rating.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Game Analysis</h3>
+            <p>
+              Analyze every game you play, especially losses. Use engines to
+              identify mistakes, but focus on understanding the reasoning behind
+              moves. Learning from mistakes is crucial for long-term
+              improvement.
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="images/chess-study.jpg"
+            alt="Someone studying chess with books and a computer"
+            width="250"
+            height="200"
+          />
+          <figcaption>
+            Serious study is essential for chess improvement - books, computers,
+            and analysis | AI Prompt: "Create an image of someone studying chess
+            with books and a computer."
+          </figcaption>
+        </figure>
+
+        <div class="content-card">
+          <h3>Learning Resources</h3>
+          <ol>
+            <li>
+              <strong>Books:</strong> "My System" by Nimzowitsch, "Silman's
+              Complete Endgame Course"
+            </li>
+            <li>
+              <strong>Videos:</strong> Chess.com's Master Classes, YouTube
+              channels like ChessNetwork
+            </li>
+            <li>
+              <strong>Software:</strong> ChessBase, Lucas Chess for analysis and
+              database management
+            </li>
+            <li>
+              <strong>Apps:</strong> Chess.com mobile app, Lichess mobile app
+              for puzzles and games
+            </li>
+            <li>
+              <strong>Coaches:</strong> Online coaching platforms for
+              personalized instruction
+            </li>
+          </ol>
+        </div>
+
+        <div class="content-card">
+          <h3>Practice Routine</h3>
+          <p>
+            A structured practice routine accelerates improvement. I recommend
+            40% tactical puzzles, 30% game analysis, 20% opening study, and 10%
+            endgame practice. This balanced approach develops all aspects of
+            chess understanding.
+          </p>
+        </div>
+      </section>
+
+      <section id="why" class="section">
+        <h2>Why I Love Chess</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Mental Challenge</h3>
+            <p>
+              Chess provides an endless mental challenge that never gets old.
+              Each game is unique, requiring creative problem-solving and
+              strategic thinking. The complexity ensures there's always
+              something new to learn and master.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Universal Language</h3>
+            <p>
+              Chess transcends cultural and language barriers. I can play with
+              anyone in the world without speaking the same language. This
+              universal aspect makes chess a powerful tool for connecting with
+              people globally.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Life Lessons</h3>
+            <p>
+              Chess teaches valuable life skills: patience, planning,
+              decision-making under pressure, and learning from mistakes. The
+              game mirrors life's challenges and helps develop resilience and
+              strategic thinking applicable beyond the board.
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="images/chess-passion.jpg"
+            alt="A close-up of hands moving chess pieces with intense focus"
+            width="300"
+            height="200"
+          />
+          <figcaption>
+            The passion and intensity that chess brings to every game | AI
+            Prompt: "Create a close-up image of hands moving chess pieces with
+            intense focus."
+          </figcaption>
+        </figure>
+
+        <div class="content-card">
+          <h3>Personal Benefits</h3>
+          <ul>
+            <li>
+              <strong>Cognitive Enhancement:</strong> Improves memory,
+              concentration, and problem-solving abilities
+            </li>
+            <li>
+              <strong>Stress Relief:</strong> Provides mental escape and
+              relaxation through focused gameplay
+            </li>
+            <li>
+              <strong>Social Connection:</strong> Builds friendships and
+              community through shared passion
+            </li>
+            <li>
+              <strong>Competitive Spirit:</strong> Satisfies the desire for
+              healthy competition and achievement
+            </li>
+            <li>
+              <strong>Artistic Expression:</strong> Allows creative expression
+              through beautiful combinations and strategies
+            </li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Chess Philosophy</h3>
+          <p>
+            "Chess is life in miniature. It is a struggle, a fight for survival.
+            It teaches you how to think ahead, how to plan, and how to adapt
+            when things don't go according to plan." This quote by Garry
+            Kasparov perfectly captures why chess resonates so deeply with me.
+          </p>
+        </div>
+      </section>
+
+      <section id="ai-prompts" class="section">
+        <h2>AI Prompts Used</h2>
+        <p>
+          I used AI for three things: text, image, and code generation. Below
+          are the prompts I asked an AI model to generate the content and images
+          for each section.
+        </p>
+        <figure>
+          <img
+            src="images/ai-chess-art.jpg"
+            alt="An image of a robot drawing chess pieces"
+            width="300"
+            height="200"
+          />
+          <figcaption>
+            An artistic representation of AI creating chess pieces | AI Prompt:
+            "Create an image of a robot drawing chess pieces."
+          </figcaption>
+        </figure>
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Miscellaneous</h3>
+            <p>
+              Text prompt: "For an image depicting [I would describe the image
+              here], generate a short caption."
+            </p>
+            <p>
+              Code prompt: "Create HTML for seven separate sections for my page
+              (What, Who, When, Where, How, Why, AI Prompts), each contained in
+              a section element, with a header, image placeholder, and content
+              cards."
+            </p>
+            <p>
+              Code prompt: "I'm trying to write JavaScript to switch between
+              sections when clicking on navigation links. Can you help guide
+              me?"
+            </p>
+            <p>
+              Code prompt: "Help me style my webpage with CSS to give it a chess
+              themed look, using tones like browns and beiges, and make sure
+              it's responsive."
+            </p>
+            <p>
+              Code prompt: "Please convert all px values in my CSS to rem
+              values."
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>What Page</h3>
+            <p>
+              Text prompt: "Generate three short paragraphs explaining what
+              chess is: one describing it as a strategic board game, one on its
+              ancient origins, and one on it as a mental exercise."
+            </p>
+            <p>
+              Image prompt: "Create an image of a chess board with all pieces in
+              their starting positions."
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Who Page</h3>
+            <p>
+              Image prompt: "Create an image of a person deeply concentrating
+              while playing chess."
+            </p>
+            <p>
+              Text prompt: "Write three short paragraphs about myself as a chess
+              player, covering my chess journey, playing style, and learning
+              philosophy. For context, I started playing chess as a teenager,
+              prefer tactical play, and believe in lifelong learning through
+              study and analysis. I started playing chess at a little older age
+              than most, so I had to work harder to catch up, which shaped my
+              approach to the game."
+            </p>
+            <p>
+              Code prompt: "Help me improve the styling of my table. I'm trying
+              to make it look more like notebook paper."
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>When Page</h3>
+            <p>
+              Text prompt: "Describe optimal times to play chess, including best
+              times of day, seasonal preferences, tournament schedules, and a
+              weekly chess schedule."
+            </p>
+            <p>
+              Image prompt: "Create an image of a chess tournament in progress
+              with multiple games being played."
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Where Page</h3>
+            <p>
+              Text prompt: "List places to play chess, including online
+              platforms like Chess.com and Lichess, local chess clubs in
+              Charlotte, and parks and cafes for outdoor play."
+            </p>
+            <p>
+              Image prompt: "Create an image of people playing chess outdoors in
+              a park setting."
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>How Page</h3>
+            <p>
+              Text prompt: "Provide advice on how to improve at chess, covering
+              studying fundamentals, tactical training, game analysis, learning
+              resources, and a practice routine."
+            </p>
+            <p>
+              Image prompt: "Create an image of someone studying chess with
+              books and a computer."
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Why Page</h3>
+            <p>
+              Text prompt: "Explain why someone loves chess, including mental
+              challenges, it as a universal language, life lessons, personal
+              benefits, and a chess philosophy quote."
+            </p>
+            <p>
+              Image prompt: "Create a close-up image of hands moving chess
+              pieces with intense focus."
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>AI Prompts Page</h3>
+            <p>
+              Image prompt: "Create an image of a robot drawing chess pieces."
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="validation-buttons">
+          <a href="https://validator.w3.org/check?uri=referer" target="_blank"
+            >HTML Validator</a
+          >
+          <a
+            href="https://jigsaw.w3.org/css-validator/check/referer"
+            target="_blank"
+            >CSS Validator</a
+          >
+          <a
+            href="https://wave.webaim.org/report#/https://luketucich.github.io/itis3135/hobby/"
+            target="_blank"
+            >Accessibility Validator</a
+          >
+        </div>
+        <p>
+          Page built by:
+          <a href="../lukesweb.dev/" class="design-firm-link">Luke's Web Dev</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll(".section");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const sectionId = link.dataset.section;
+
+            navLinks.forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+
+            sections.forEach((s) => s.classList.remove("active"));
+            document.getElementById(sectionId).classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
