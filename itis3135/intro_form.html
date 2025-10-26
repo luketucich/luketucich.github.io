@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luke Tucich | ITIS-3135 | Introduction Form</title>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/HTMLInclude.js"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main class="page-centered">
+      <section>
+        <h2 class="text-lg title">Introduction Form</h2>
+        <h3 class="text-md">Please submit the form below.</h3>
+        <hr class="divider-short" />
+        <form id="form">
+          <fieldset>
+            <legend>Name Information</legend>
+            <label for="firstName">First Name <span>*</span></label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              value="Luke"
+              placeholder="Enter your first name"
+            />
+            <label for="middleName">Middle Name/Initial (Optional)</label>
+            <input
+              type="text"
+              id="middleName"
+              name="middleName"
+              value=""
+              placeholder="Enter your middle name or initial"
+            />
+            <label for="nickname">Nickname/Preferred Name (Optional)</label>
+            <input
+              type="text"
+              id="nickname"
+              name="nickname"
+              value=""
+              placeholder="Enter your nickname or preferred name"
+            />
+            <label for="lastName">Last Name <span>*</span></label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              value="Tucich"
+              placeholder="Enter your last name"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Acknowledgment</legend>
+            <label for="acknowledgment"
+              >Acknowledgment Statement <span>*</span></label
+            >
+            <textarea
+              id="acknowledgment"
+              name="acknowledgment"
+              required
+              placeholder="Enter your acknowledgment statement"
+              rows="3"
+            >
+I, Luke Tucich, agree to abide by the terms of my Fall 2024 ITIS3135 course with my instructor, Professor D.I. von Briesen.</textarea
+            >
+            <label for="acknowledgmentDate"
+              >Acknowledgment Date <span>*</span></label
+            >
+            <input
+              type="date"
+              id="acknowledgmentDate"
+              name="acknowledgmentDate"
+              required
+              value="2024-08-22"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Mascot Information</legend>
+            <label for="mascotAdjective">Mascot Adjective <span>*</span></label>
+            <input
+              type="text"
+              id="mascotAdjective"
+              name="mascotAdjective"
+              required
+              value="Loyal"
+              placeholder="Enter an adjective for your mascot"
+            />
+            <label for="mascotAnimal">Mascot Animal <span>*</span></label>
+            <input
+              type="text"
+              id="mascotAnimal"
+              name="mascotAnimal"
+              required
+              value="Tamarin"
+              placeholder="Enter your mascot animal"
+            />
+            <label for="divider">Divider Character <span>*</span></label>
+            <input
+              type="text"
+              id="divider"
+              name="divider"
+              required
+              value="~"
+              placeholder="Enter a divider character (e.g., ~, |, ♥️)"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Picture</legend>
+            <label for="picture"
+              >Upload Picture (optional, defaults to mine)</label
+            >
+            <input type="file" id="picture" name="picture" accept="image/*" />
+            <label for="pictureCaption">Picture Caption <span>*</span></label>
+            <input
+              type="text"
+              id="pictureCaption"
+              name="pictureCaption"
+              required
+              value="a drawing of me waving next to a sign labeled about me"
+              placeholder="Enter image caption"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Personal Statement</legend>
+            <label for="personalStatement"
+              >Personal Statement <span>*</span></label
+            >
+            <textarea
+              id="personalStatement"
+              name="personalStatement"
+              required
+              placeholder="Enter your personal statement"
+              rows="3"
+            >
+Student Developer & Tech Enthusiast</textarea
+            >
+          </fieldset>
+          <fieldset>
+            <legend>Background Sections (7 Required)</legend>
+            <label for="bullet1Title">Section 1 Title <span>*</span></label>
+            <input
+              type="text"
+              id="bullet1Title"
+              name="bullet1Title"
+              required
+              value="Personal Background"
+              placeholder="Section title"
+            />
+            <textarea
+              id="bullet1Content"
+              name="bullet1Content"
+              required
+              placeholder="Section content"
+              rows="4"
+            >
+I'm Luke, 20 years old, born in Asheboro, North Carolina. As a kid, I loved drawing, painting, playing with Legos, and experimenting with the computer. This mix of creativity and technology inspired me to pursue software engineering. I enjoy problem-solving and creating, which makes computer science feel natural and rewarding. Outside of programming, I enjoy cooking, weightlifting, playing chess, rock climbing, and biking.</textarea
+            >
+            <label for="bullet2Title">Section 2 Title <span>*</span></label>
+            <input
+              type="text"
+              id="bullet2Title"
+              name="bullet2Title"
+              required
+              value="Professional Background"
+              placeholder="Section title"
+            />
+            <textarea
+              id="bullet2Content"
+              name="bullet2Content"
+              required
+              placeholder="Section content"
+              rows="4"
+            >
+I'm relatively new to tech, having only started programming in April 2024. Since then, I've self-learned extensively, completing The Odin Project to catch up on modern web development and computer science fundamentals. I've gained experience in HTML, CSS, JavaScript, React, Node.js, Express, and PostgreSQL. After a long application process, I finally landed a Software Engineering internship at Walmart for Summer 2026. Right now, I'm learning Go and Python to strengthen my backend skills.</textarea
+            >
+            <label for="bullet3Title">Section 3 Title <span>*</span></label>
+            <input
+              type="text"
+              id="bullet3Title"
+              name="bullet3Title"
+              required
+              value="Academic Background"
+              placeholder="Section title"
+            />
+            <textarea
+              id="bullet3Content"
+              name="bullet3Content"
+              required
+              placeholder="Section content"
+              rows="4"
+            >
+I'm pursuing a B.S. in Computer Science with a concentration in Web/Mobile Development & Software Engineering. After high school, I attended Sandhills Community College and earned an Associate's in Science, focusing on math and science courses like calculus and chemistry. Along with AP credit, this saved me a year of school, but it also sped up my timeline, making the transition to UNC Charlotte a wake-up call to take my learning seriously. I'm currently classified as a senior by credits, with about three semesters left.</textarea
+            >
+            <label for="bullet4Title">Section 4 Title <span>*</span></label>
+            <input
+              type="text"
+              id="bullet4Title"
+              name="bullet4Title"
+              required
+              value="Primary Computer"
+              placeholder="Section title"
+            />
+            <textarea
+              id="bullet4Content"
+              name="bullet4Content"
+              required
+              placeholder="Section content"
+              rows="4"
+            >
+M4 MacBook Pro, typically working between my apartment, my girlfriend's house, and local coffee shops.</textarea
+            >
+            <label for="bullet5Title">Section 5 Title <span>*</span></label>
+            <input
+              type="text"
+              id="bullet5Title"
+              name="bullet5Title"
+              required
+              value="Courses I'm Taking + Why"
+              placeholder="Section title"
+            />
+            <textarea
+              id="bullet5Content"
+              name="bullet5Content"
+              required
+              placeholder="Section content (this will be replaced by course list)"
+              rows="2"
+            >
+See course list below</textarea
+            >
+            <label for="bullet6Title">Section 6 Title <span>*</span></label>
+            <input
+              type="text"
+              id="bullet6Title"
+              name="bullet6Title"
+              required
+              value="Some Things About Me"
+              placeholder="Section title"
+            />
+            <textarea
+              id="bullet6Content"
+              name="bullet6Content"
+              required
+              placeholder="Section content"
+              rows="4"
+            >
+My favorite animal is a monkey.||My favorite color is forest green.||I'm 1600 rapid ELO in chess.||Creator of Decipher[](https://deciphergame.com), a daily trivia game.</textarea
+            >
+            <label for="bullet7Title">Section 7 Title <span>*</span></label>
+            <input
+              type="text"
+              id="bullet7Title"
+              name="bullet7Title"
+              required
+              value="A Good Quote"
+              placeholder="Section title"
+            />
+            <textarea
+              id="bullet7Content"
+              name="bullet7Content"
+              required
+              placeholder="Section content (use for quote section)"
+              rows="2"
+            >
+See quote below</textarea
+            >
+          </fieldset>
+          <fieldset>
+            <legend>Courses</legend>
+            <div id="coursesContainer">
+              <div class="course-entry">
+                <label>Course Department <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseDept"
+                  required
+                  value="ITIS"
+                  placeholder="e.g., ITIS"
+                />
+                <label>Course Number <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseNumber"
+                  required
+                  value="3135"
+                  placeholder="e.g., 3135"
+                />
+                <label>Course Name <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseName"
+                  required
+                  value="Front-End Web Application Development"
+                  placeholder="Course name"
+                />
+                <label>Reason <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseReason"
+                  required
+                  value="Required course, but I'm also taking it to sharpen my frontend skills."
+                  placeholder="Why are you taking this course?"
+                />
+              </div>
+              <div class="course-entry">
+                <label>Course Department <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseDept"
+                  required
+                  value="STAT"
+                  placeholder="e.g., ITIS"
+                />
+                <label>Course Number <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseNumber"
+                  required
+                  value="2122"
+                  placeholder="e.g., 3135"
+                />
+                <label>Course Name <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseName"
+                  required
+                  value="Intro to Probability & Statistics"
+                  placeholder="Course name"
+                />
+                <label>Reason <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseReason"
+                  required
+                  value="Required course, also helps strengthen problem-solving and data reasoning."
+                  placeholder="Why are you taking this course?"
+                />
+              </div>
+              <div class="course-entry">
+                <label>Course Department <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseDept"
+                  required
+                  value="ITCS"
+                  placeholder="e.g., ITIS"
+                />
+                <label>Course Number <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseNumber"
+                  required
+                  value="2175"
+                  placeholder="e.g., 3135"
+                />
+                <label>Course Name <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseName"
+                  required
+                  value="Logic and Algorithms"
+                  placeholder="Course name"
+                />
+                <label>Reason <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseReason"
+                  required
+                  value="Required course, but I'm excited to build stronger problem-solving skills."
+                  placeholder="Why are you taking this course?"
+                />
+              </div>
+              <div class="course-entry">
+                <label>Course Department <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseDept"
+                  required
+                  value="ITCS"
+                  placeholder="e.g., ITIS"
+                />
+                <label>Course Number <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseNumber"
+                  required
+                  value="3155"
+                  placeholder="e.g., 3135"
+                />
+                <label>Course Name <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseName"
+                  required
+                  value="Software Engineering"
+                  placeholder="Course name"
+                />
+                <label>Reason <span>*</span></label>
+                <input
+                  type="text"
+                  class="courseReason"
+                  required
+                  value="Required course, also diversifies my programming + engineering skillset."
+                  placeholder="Why are you taking this course?"
+                />
+              </div>
+            </div>
+            <button type="button" id="addCourseBtn">Add Course</button>
+          </fieldset>
+          <fieldset>
+            <legend>Quote</legend>
+            <label for="quote">Quote <span>*</span></label>
+            <textarea
+              id="quote"
+              name="quote"
+              required
+              placeholder="Enter a meaningful quote"
+              rows="3"
+            >
+Do everything by hand, even when using the computer.</textarea
+            >
+            <label for="quoteAuthor">Quote Author <span>*</span></label>
+            <input
+              type="text"
+              id="quoteAuthor"
+              name="quoteAuthor"
+              required
+              value="Hayao Miyazaki"
+              placeholder="Author of the quote"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Optional Information</legend>
+            <label for="funnyThing">Something Funny (Optional)</label>
+            <textarea
+              id="funnyThing"
+              name="funnyThing"
+              placeholder="Share something funny"
+              rows="2"
+            ></textarea>
+            <label for="shareInfo"
+              >Something I'd Like to Share (Optional)</label
+            >
+            <textarea
+              id="shareInfo"
+              name="shareInfo"
+              placeholder="Share something interesting"
+              rows="2"
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Links (5 Required)</legend>
+            <label for="link1Label">Link 1 Label <span>*</span></label>
+            <input
+              type="text"
+              id="link1Label"
+              name="link1Label"
+              required
+              value="GitHub"
+              placeholder="Link label"
+            />
+            <input
+              type="url"
+              id="link1URL"
+              name="link1URL"
+              required
+              value="https://github.com/luketucich/"
+              placeholder="Link URL"
+            />
+            <label for="link2Label">Link 2 Label <span>*</span></label>
+            <input
+              type="text"
+              id="link2Label"
+              name="link2Label"
+              required
+              value="LinkedIn"
+              placeholder="Link label"
+            />
+            <input
+              type="url"
+              id="link2URL"
+              name="link2URL"
+              required
+              value="https://www.linkedin.com/in/luketucich/"
+              placeholder="Link URL"
+            />
+            <label for="link3Label">Link 3 Label <span>*</span></label>
+            <input
+              type="text"
+              id="link3Label"
+              name="link3Label"
+              required
+              value="GitHub Site"
+              placeholder="Link label"
+            />
+            <input
+              type="url"
+              id="link3URL"
+              name="link3URL"
+              required
+              value="https://luketucich.github.io/"
+              placeholder="Link URL"
+            />
+            <label for="link4Label">Link 4 Label <span>*</span></label>
+            <input
+              type="text"
+              id="link4Label"
+              name="link4Label"
+              required
+              value="CLT Site"
+              placeholder="Link label"
+            />
+            <input
+              type="url"
+              id="link4URL"
+              name="link4URL"
+              required
+              value="https://webpages.charlotte.edu/ltucich/"
+              placeholder="Link URL"
+            />
+            <label for="link5Label">Link 5 Label <span>*</span></label>
+            <input
+              type="text"
+              id="link5Label"
+              name="link5Label"
+              required
+              value="FreeCodeCamp"
+              placeholder="Link label"
+            />
+            <input
+              type="url"
+              id="link5URL"
+              name="link5URL"
+              required
+              value="https://www.freecodecamp.org/luketucich"
+              placeholder="Link URL"
+            />
+          </fieldset>
+          <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" id="clearBtn">Clear</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="scripts/introduction.js"></script>
+  </body>
+</html>
