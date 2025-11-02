@@ -53,7 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let html = `
       <section>
         <h2 class="text-lg title">Introduction Form</h2>
-        <p class="tagline">${g("personalStatement")} | ${g("mascotAdjective")} ${g("mascotAnimal")}</p>
+        <p class="tagline">${g("personalStatement")} | ${g(
+      "mascotAdjective"
+    )} ${g("mascotAnimal")}</p>
         ${div}
         <figure>
           <img class="img-lg" src="${picture}" alt="${g("pictureCaption")}" />

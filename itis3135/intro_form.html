@@ -10,6 +10,8 @@
     ></script>
     <script src="scripts/HTMLInclude.js"></script>
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </head>
   <body>
     <div id="header-container"></div>
@@ -542,15 +544,23 @@ Do everything by hand, even when using the computer.</textarea
               placeholder="Link URL"
             />
           </fieldset>
-          <div>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-            <button type="button" id="clearBtn">Clear</button>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary btn-large">Submit Form</button>
+            <div class="btn-group">
+              <button type="button" id="generateJSONBtn" class="btn-secondary btn-medium">Generate JSON</button>
+              <button type="button" id="generateHTMLBtn" class="btn-secondary btn-medium">Generate HTML</button>
+            </div>
+            <div class="btn-group">
+              <button type="reset" class="btn-tertiary btn-small">Reset</button>
+              <button type="button" id="clearBtn" class="btn-tertiary btn-small">Clear</button>
+            </div>
           </div>
         </form>
       </section>
     </main>
     <div id="footer-container"></div>
     <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_json.js"></script>
+    <script src="scripts/generate_html.js"></script>
   </body>
 </html>
