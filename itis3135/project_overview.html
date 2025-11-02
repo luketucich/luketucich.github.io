@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luke Tucich | ITIS-3135 | Project Overview</title>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/HTMLInclude.js"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="page-centered">
+      <section>
+        <h2 class="text-lg title">Project Overview</h2>
+        <p class="tagline">UNCG Sewing Club Website - Requirements & Design</p>
+
+        <hr class="divider-short" />
+      </section>
+
+      <!-- Project Overview Section -->
+      <section class="content-section">
+        <h3>Project Overview</h3>
+        <ol>
+          <li>
+            <strong>Describe your application and its purpose:</strong> The UNCG
+            Sewing Club Website is a web application designed to promote the
+            UNCG Sewing Club, founded by Bertha Jernigan. Its purpose is to
+            showcase club activities, provide information on how to join,
+            highlight past events, and share details on upcoming meetings to
+            encourage participation and communication among members and
+            interested students. The site will use a cute, pastel-colored theme
+            with pink, light blue, and mint tones for a girly, welcoming
+            aesthetic.
+          </li>
+          <li>
+            <strong>Intended users of the website:</strong> Current Sewing Club
+            members (for updates and event recaps) and potential members (UNCG
+            students interested in sewing, crafting, or community activities).
+          </li>
+          <li>
+            <strong>Overview of the content of the website:</strong> Content
+            includes club introduction and goals, schedules for meetings, photo
+            galleries from events, contact forms for inquiries or joining, and
+            details on past meetings with photos and summaries. No user data
+            storage; all content is static or loaded read-only via APIs if
+            needed.
+          </li>
+        </ol>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Client Information Section -->
+      <section class="content-section">
+        <h3>Client Information</h3>
+        <ul>
+          <li><strong>Name of the client:</strong> Bertha Jernigan</li>
+          <li>
+            <strong
+              >Organization/Institute/Business the client is associated
+              with:</strong
+            >
+            UNCG Sewing Club (founder), pre-dental student at UNCG
+          </li>
+          <li>
+            <strong>Client's valid email address:</strong> bjjernigan@uncg.edu
+          </li>
+          <li><strong>Client's phone number:</strong> 336-843-0070</li>
+        </ul>
+        <p class="paragraph">
+          <strong>Timeline for communication:</strong> Meet in person every
+          Friday to discuss progress, gather content (e.g., photos, event
+          details), and get feedback to meet assignment deadlines.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Wireframe Section -->
+      <section class="content-section">
+        <h3>Wireframe</h3>
+        <p class="paragraph">
+          The wireframe shows the default page layout: Header with logo on the
+          left and navigation bar on the right, a hero section with a big photo,
+          main content area, additional content section, footer. Created using
+          draw.io.
+        </p>
+        <figure>
+          <img
+            src="images/wireframe.png"
+            alt="Wireframe for default page"
+            style="max-width: 60%; height: auto"
+          />
+          <figcaption>
+            Wireframe for the default page design.
+            <a
+              href="https://drive.google.com/file/d/1kjVwyKCSTDPyPAlwFWMkSoMwcAoLlA-M/view?usp=sharing"
+              target="_blank"
+              >Link to draw.io file</a
+            >.
+          </figcaption>
+        </figure>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Site Map Section -->
+      <section class="content-section">
+        <h3>Site Map</h3>
+        <p class="paragraph">
+          The site map outlines the 5 pages and navigation: All pages link via
+          the top navigation bar. Home may include a "Join" button linking to
+          Contact. Gallery images may link to related Past Meetings details.
+        </p>
+        <figure>
+          <img
+            src="images/sitemap.png"
+            alt="Site map"
+            style="max-width: 100%; height: auto"
+          />
+          <figcaption>
+            Site map showing page connections.
+            <a
+              href="https://drive.google.com/file/d/1yPKwrfjT60mpgdo3XG_h-MJ-24dK1le6/view?usp=sharing"
+              target="_blank"
+              >Link to draw.io file</a
+            >.
+          </figcaption>
+        </figure>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Page Design Section -->
+      <section class="content-section">
+        <h3>Page Design</h3>
+        <p class="paragraph">
+          The site will have a consistent header (logo left, nav right) and
+          footer (with HTML/CSS validation links) across all pages. Navigation
+          bar enables single-click access to all pages.
+        </p>
+
+        <!-- Home Page -->
+        <h4>Home (index.html)</h4>
+        <ul>
+          <li>
+            <strong>Purpose of the page:</strong> Introduce the club and
+            encourage visitors to explore or join.
+          </li>
+          <li>
+            <strong>Audience/Users:</strong> Current and potential members.
+          </li>
+          <li>
+            <strong>What will be content of the page:</strong> Hero image (big
+            photo of club activity), text about club goals, brief highlights of
+            upcoming events, and a "Join Now" button.
+          </li>
+          <li>
+            <strong
+              >Is this a page where you are asking users to enter data:</strong
+            >
+            No.
+          </li>
+          <li>
+            <strong>Will those data fields need any validations:</strong> N/A.
+          </li>
+          <li>
+            <strong
+              >Will the page contain buttons or hyperlinks or drop
+              downs:</strong
+            >
+            Yes, "Join Now" button (links to Contact), hyperlinks to other pages
+            via nav.
+          </li>
+          <li>
+            <strong>What actions will happen in the page:</strong> Button click
+            navigates to Contact; nav clicks load other pages.
+          </li>
+          <li>
+            <strong>Any special notes:</strong> Hero image for visual appeal;
+            pastel theme applied here.
+          </li>
+        </ul>
+
+        <!-- Schedule Page -->
+        <h4>Schedule</h4>
+        <ul>
+          <li>
+            <strong>Purpose of the page:</strong> Display upcoming meetings and
+            events.
+          </li>
+          <li>
+            <strong>Audience/Users:</strong> Current and potential members.
+          </li>
+          <li>
+            <strong>What will be content of the page:</strong> List or calendar
+            of dates, times, locations, and descriptions of meetings.
+          </li>
+          <li>
+            <strong
+              >Is this a page where you are asking users to enter data:</strong
+            >
+            No.
+          </li>
+          <li>
+            <strong>Will those data fields need any validations:</strong> N/A.
+          </li>
+          <li>
+            <strong
+              >Will the page contain buttons or hyperlinks or drop
+              downs:</strong
+            >
+            Hyperlinks to event details if expanded.
+          </li>
+          <li>
+            <strong>What actions will happen in the page:</strong> AJAX load of
+            event data from JSON on page load.
+          </li>
+          <li>
+            <strong>Any special notes:</strong> Use jQuery-UI datepicker if
+            adding interactive calendar (optional).
+          </li>
+        </ul>
+
+        <!-- Gallery Page -->
+        <h4>Gallery</h4>
+        <ul>
+          <li>
+            <strong>Purpose of the page:</strong> Showcase photos from club
+            events.
+          </li>
+          <li>
+            <strong>Audience/Users:</strong> Current and potential members.
+          </li>
+          <li>
+            <strong>What will be content of the page:</strong> Grid of images
+            with captions.
+          </li>
+          <li>
+            <strong
+              >Is this a page where you are asking users to enter data:</strong
+            >
+            No.
+          </li>
+          <li>
+            <strong>Will those data fields need any validations:</strong> N/A.
+          </li>
+          <li>
+            <strong
+              >Will the page contain buttons or hyperlinks or drop
+              downs:</strong
+            >
+            Hyperlinks on images to Past Meetings.
+          </li>
+          <li>
+            <strong>What actions will happen in the page:</strong> Image clicks
+            open lightbox or link to details; hover shows tooltips.
+          </li>
+          <li><strong>Any special notes:</strong> N/a</li>
+        </ul>
+
+        <!-- Contact Page -->
+        <h4>Contact</h4>
+        <ul>
+          <li>
+            <strong>Purpose of the page:</strong> Allow users to inquire or join
+            the club.
+          </li>
+          <li><strong>Audience/Users:</strong> Potential members.</li>
+          <li>
+            <strong>What will be content of the page:</strong> Form for name,
+            email, message; club contact info.
+          </li>
+          <li>
+            <strong
+              >Is this a page where you are asking users to enter data:</strong
+            >
+            Yes, via form.
+          </li>
+          <li>
+            <strong>Will those data fields need any validations:</strong> Yes
+            (e.g., required fields, email format).
+          </li>
+          <li>
+            <strong
+              >Will the page contain buttons or hyperlinks or drop
+              downs:</strong
+            >
+            Submit button, possible dropdown for inquiry type.
+          </li>
+          <li>
+            <strong>What actions will happen in the page:</strong> Form submit
+            validates with JS, then processes (e.g., alert or AJAX send if API
+            available).
+          </li>
+          <li><strong>Any special notes:</strong> Read-only; no storage.</li>
+        </ul>
+
+        <!-- Past Meetings Page -->
+        <h4>Past Meetings</h4>
+        <ul>
+          <li>
+            <strong>Purpose of the page:</strong> Recap past events with details
+            and photos.
+          </li>
+          <li>
+            <strong>Audience/Users:</strong> Current and potential members.
+          </li>
+          <li>
+            <strong>What will be content of the page:</strong> List of events
+            with dates, summaries, embedded photos.
+          </li>
+          <li>
+            <strong
+              >Is this a page where you are asking users to enter data:</strong
+            >
+            No.
+          </li>
+          <li>
+            <strong>Will those data fields need any validations:</strong> N/A.
+          </li>
+          <li>
+            <strong
+              >Will the page contain buttons or hyperlinks or drop
+              downs:</strong
+            >
+            Expand/collapse buttons for details.
+          </li>
+          <li>
+            <strong>What actions will happen in the page:</strong> Click to
+            expand event sections.
+          </li>
+          <li>
+            <strong>Any special notes:</strong> Use accordion for organization.
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Dynamic Functionality Section -->
+      <section class="content-section">
+        <h3>Dynamic Functionality on the Website</h3>
+        <ul>
+          <li>
+            <strong>Contact Form with Validation (JavaScript):</strong> On the
+            Contact page, a form for inquiries with client-side checks (e.g.,
+            empty fields, valid email). <em>Purpose:</em> Collect info safely
+            without server storage. <em>Example URL:</em>
+            <a
+              href="https://www.w3schools.com/js/js_validation.asp"
+              target="_blank"
+              >https://www.w3schools.com/js/js_validation.asp</a
+            >
+            (demonstrates basic JS form validation).
+          </li>
+          <li>
+            <strong>jQuery-UI Tooltip:</strong> On Gallery images and links
+            across pages, hover to show extra info like event dates or
+            descriptions. <em>Purpose:</em> Provide quick context without
+            cluttering the page. <em>Example URL:</em>
+            <a href="https://jqueryui.com/tooltip/" target="_blank"
+              >https://jqueryui.com/tooltip/</a
+            >
+            (official demo of jQuery-UI tooltips).
+          </li>
+          <li>
+            <strong>jQuery-UI Accordion:</strong> On the Past Meetings page,
+            collapsible sections for each event to expand details.
+            <em>Purpose:</em> Organize content for better readability on
+            mobile/desktop. <em>Example URL:</em>
+            <a href="https://jqueryui.com/accordion/" target="_blank"
+              >https://jqueryui.com/accordion/</a
+            >
+            (official demo of jQuery-UI accordion).
+          </li>
+          <li>
+            <strong>AJAX Functionality:</strong> On the Schedule page, load
+            upcoming events from a JSON file without refreshing.
+            <em>Purpose:</em> Dynamic updates if events change, keeping the site
+            fresh. <em>Example URL:</em>
+            <a href="https://api.jquery.com/jQuery.getJSON/" target="_blank"
+              >https://api.jquery.com/jQuery.getJSON/</a
+            >
+            (shows how to load JSON via AJAX).
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Notes Section -->
+      <section class="content-section">
+        <h3>Notes</h3>
+        <p class="paragraph text-sm">
+          Best practices for club websites from
+          <a
+            href="https://www.wildapricot.com/blog/club-website-examples"
+            target="_blank"
+            >https://www.wildapricot.com/blog/club-website-examples</a
+          >
+        </p>
+        <p class="paragraph text-sm">
+          Color scheme inspiration from
+          <a
+            href="https://colorhunt.co/palette/ff8f8ffff1cbc2e2fab7a3e3"
+            target="_blank"
+            >https://colorhunt.co/palette/ff8f8ffff1cbc2e2fab7a3e3</a
+          >
+        </p>
+        <p class="paragraph text-sm">
+          Identifying the best workflow for building a client website from
+          <a href="https://grok.com/" target="_blank">https://grok.com/</a>
+        </p>
+        <p class="paragraph text-sm">Luke Tucich, November 02</p>
+      </section>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+  </body>
+</html>

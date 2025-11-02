@@ -94,10 +94,11 @@ h3 {
 }
 .nav-bar ul {
   display: flex;
-  gap: var(--gap-md);
+  gap: var(--gap-sm);
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap;
 }
 .nav-bar a {
   text-decoration: none;
@@ -106,9 +107,10 @@ h3 {
   border: 0.07rem solid var(--border);
   border-radius: 0.4rem;
   color: var(--primary-text);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: background 0.2s, border-color 0.2s;
   line-height: 1;
+  white-space: nowrap;
 }
 .nav-bar a:hover {
   background: var(--button-hover);
@@ -480,6 +482,60 @@ section {
 
 .card-green {
   border-top: 0.2rem solid #38a169;
+}
+
+/* Content Section Styles */
+.content-section {
+  max-width: 65ch;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content-section h3 {
+  color: var(--title-color);
+  font-size: 1.3rem;
+  margin-top: var(--gap-lg);
+  margin-bottom: var(--gap-md);
+  text-align: center;
+}
+
+.content-section h4 {
+  color: var(--tagline-color);
+  font-size: 1.1rem;
+  margin-top: var(--gap-md);
+  margin-bottom: var(--gap-sm);
+  text-align: left;
+}
+
+.content-section ol,
+.content-section ul {
+  max-width: 100%;
+  line-height: 1.7;
+  margin-bottom: var(--gap-md);
+  padding-left: 2rem;
+}
+
+.content-section li {
+  margin-bottom: var(--gap-sm);
+  text-align: left;
+}
+
+.content-section li strong {
+  color: var(--primary-text);
+}
+
+.content-section figure {
+  width: 100%;
+  max-width: 100%;
+  margin: var(--gap-lg) 0;
+  text-align: center;
+}
+
+.content-section figcaption {
+  margin-top: var(--gap-sm);
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  font-style: italic;
 }
 
 /* Mobile / Tablet */
