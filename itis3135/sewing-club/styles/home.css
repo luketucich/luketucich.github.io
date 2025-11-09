@@ -1,5 +1,6 @@
 /* Home Page Styles */
 
+/* Hero section with video */
 .hero {
   display: flex;
   align-items: center;
@@ -109,6 +110,7 @@
   transform: translateY(-0.125rem);
 }
 
+/* Content sections (about, what we do) */
 .content-section {
   margin-bottom: 3rem;
   padding: 2rem;

@@ -1,12 +1,14 @@
+// Mobile hamburger menu functionality
 function setupMenu() {
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector("header nav");
 
+  // Exit if header hasn't loaded yet
   if (!menuToggle || !nav) {
     return;
   }
 
-  // Toggle menu open/closed
+  // Toggle menu open/closed when hamburger is clicked
   menuToggle.onclick = function() {
     const isActive = nav.classList.contains("active");
     
@@ -19,7 +21,7 @@ function setupMenu() {
     }
   };
 
-  // Close menu when clicking a link
+  // Close menu when clicking a navigation link
   const links = nav.querySelectorAll("a");
   links.forEach(function(link) {
     link.onclick = function() {
@@ -28,7 +30,7 @@ function setupMenu() {
     };
   });
 
-  // Close menu when clicking outside
+  // Close menu when clicking outside of it
   document.onclick = function(event) {
     if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
       nav.classList.remove("active");
@@ -37,5 +39,5 @@ function setupMenu() {
   };
 }
 
-// Wait for header to be loaded via HTMLInclude
+// Wait for header to be loaded before setting up menu
 document.addEventListener("HTMLIncludeLoaded", setupMenu);

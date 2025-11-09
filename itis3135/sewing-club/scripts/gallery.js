@@ -1,6 +1,6 @@
-// Gallery Page - jQuery UI Tooltip
+// Gallery page tooltips using jQuery UI
 $(document).ready(function () {
-  // Initialize tooltips on gallery items
+  // Show date and description when hovering over gallery images
   $(".gallery-item").tooltip({
     position: {
       my: "center bottom-10",

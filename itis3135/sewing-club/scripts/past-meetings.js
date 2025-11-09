@@ -1,9 +1,9 @@
-// Past Meetings Page - jQuery UI Accordion
+// Past meetings accordion using jQuery UI
 $(document).ready(function () {
-  // Initialize accordion
+  // Create expandable/collapsible meeting sections
   $("#meetings-accordion").accordion({
     collapsible: true,
-    active: 0, // First item open by default
+    active: 0, // First meeting starts open
     heightStyle: "content",
     animate: 300,
   });

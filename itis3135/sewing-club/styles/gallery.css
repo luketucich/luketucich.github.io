@@ -1,5 +1,6 @@
 /* Gallery Page Styles */
 
+/* Page header section */
 .page-header {
   margin-bottom: 2rem;
   padding: 2rem;
@@ -19,6 +20,7 @@
   margin-bottom: 0;
 }
 
+/* Photo grid layout */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));

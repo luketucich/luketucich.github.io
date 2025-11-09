@@ -1,5 +1,6 @@
 /* Past Meetings Page Styles */
 
+/* Page header section */
 .page-header {
   margin-bottom: 2rem;
   padding: 2rem;
@@ -19,6 +20,7 @@
   margin-bottom: 0;
 }
 
+/* Accordion container */
 #meetings-accordion {
   padding: 2rem;
   border-radius: var(--radius-lg);
@@ -82,7 +84,7 @@
   }
 }
 
-/* jQuery UI accordion overrides */
+/* jQuery UI accordion style overrides */
 .ui-accordion .ui-accordion-header {
   background-color: transparent;
   border: none;

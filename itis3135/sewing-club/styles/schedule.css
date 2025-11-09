@@ -1,5 +1,6 @@
 /* Schedule Page Styles */
 
+/* Page header section */
 .page-header {
   margin-bottom: 2rem;
   padding: 2rem;
@@ -19,6 +20,7 @@
   margin-bottom: 0;
 }
 
+/* Event list styling */
 .schedule-list {
   list-style: none;
   padding: 0;

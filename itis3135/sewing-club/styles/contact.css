@@ -1,5 +1,6 @@
 /* Contact Page Styles */
 
+/* Page header section */
 .page-header {
   margin-bottom: 2rem;
   padding: 2rem;
@@ -19,6 +20,7 @@
   margin-bottom: 0;
 }
 
+/* Contact form styling */
 form {
   flex: 1;
   padding: 2rem;
@@ -86,6 +88,7 @@ button[type="submit"]:hover {
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
+/* Container for contact info and form */
 .contact-container {
   display: flex;
   gap: 2rem;

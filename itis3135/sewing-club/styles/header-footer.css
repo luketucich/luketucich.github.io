@@ -1,5 +1,6 @@
 /* Header & Footer Styles */
 
+/* Header container */
 header {
   display: flex;
   align-items: center;
@@ -17,6 +18,7 @@ header h1 {
   font-size: 1.75rem;
 }
 
+/* Hamburger menu button (mobile only) */
 .menu-toggle {
   display: none;
   background: none;
@@ -57,6 +59,7 @@ header h1 {
   opacity: 1;
 }
 
+/* Navigation menu */
 nav ul {
   display: flex;
   flex-direction: row;
@@ -88,6 +91,7 @@ nav a:hover {
   transform: translateY(-0.125rem);
 }
 
+/* Footer container */
 footer {
   padding: 2rem;
   text-align: center;
