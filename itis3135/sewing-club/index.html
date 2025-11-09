@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNCG Sewing Club - Home</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/header-footer.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/menu.js" defer></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="hero stitch-brown">
+        <video autoplay loop muted>
+          <source src="assets/videos/hero-introduction.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+          <div class="hero-text-logo">
+            <svg viewBox="0 0 400 120" class="arched-text-svg">
+              <defs>
+                <path
+                  id="arch"
+                  d="M 30,100 Q 200,20 370,100"
+                  fill="transparent"
+                />
+              </defs>
+              <text
+                fill="var(--text-dark)"
+                font-size="48"
+                font-family="Jua, Arial, sans-serif"
+                font-weight="normal"
+              >
+                <textPath href="#arch" startOffset="50%" text-anchor="middle">
+                  Welcome to the
+                </textPath>
+              </text>
+            </svg>
+            <img
+              src="assets/images/logo.png"
+              alt="UNCG Sewing Club Logo"
+              class="hero-logo"
+            />
+          </div>
+          <p>
+            Join us for creative projects, community, and fun sewing activities
+          </p>
+          <div class="hero-buttons">
+            <a
+              target="_blank"
+              href="https://uncg.presence.io/organization/university-of-north-carolina-at-greensboro-sewing-club"
+              >Join Now</a
+            >
+            <a href="schedule.html">View Schedule</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section stitch-brown">
+        <h3>About Our Club</h3>
+        <p>
+          The UNCG Sewing Club was founded by Bertha Jernigan to bring together
+          students who love sewing, crafting, and creating. Whether you're a
+          beginner or an experienced sewist, we welcome everyone!
+        </p>
+        <p>
+          Our club meets regularly to work on projects, share tips and
+          techniques, and build a supportive community of makers. We provide a
+          space where creativity flourishes and friendships are stitched
+          together.
+        </p>
+      </section>
+
+      <section class="content-section stitch-brown">
+        <h3>What We Do</h3>
+        <p>
+          From learning basic stitches to completing advanced projects, our club
+          offers something for everyone. We host workshops, social sewing
+          sessions, and showcase members' creations.
+        </p>
+        <p>
+          Check out our <a href="schedule.html">Schedule</a> for upcoming events
+          and browse our <a href="gallery.html">Gallery</a> to see what we've
+          been working on!
+        </p>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+  </body>
+</html>

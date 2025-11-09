@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNCG Sewing Club - Contact</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/header-footer.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="page-header stitch-lavender">
+        <h2>Contact Us</h2>
+        <p>
+          Interested in joining or have questions? We'd love to hear from you!
+        </p>
+      </section>
+
+      <div class="contact-container">
+        <div class="contact-info stitch-brown">
+          <h3>Get In Touch</h3>
+          <p><strong>Club Founder:</strong> Bertha Jernigan</p>
+          <p><strong>Email:</strong> bjjernigan@uncg.edu</p>
+          <p><strong>Phone:</strong> 336-843-0070</p>
+        </div>
+
+        <form class="stitch-brown">
+          <h3>Send Us a Message</h3>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+  </body>
+</html>

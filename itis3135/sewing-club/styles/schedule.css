@@ -1,0 +1,63 @@
+/* Schedule Page Styles */
+
+.page-header {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.page-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-item {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  transition: all 0.2s;
+}
+
+.schedule-item:hover {
+  transform: translateX(0.5rem);
+}
+
+.schedule-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.schedule-item .date {
+  font-style: italic;
+  color: var(--text-light);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.schedule-item .location {
+  font-weight: bold;
+  color: var(--pink);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-item p {
+  color: var(--text-dark);
+  line-height: 1.6;
+}

@@ -1,0 +1,384 @@
+/* UNCG Sewing Club - Base Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+:root {
+  /* Pastel Color Palette */
+  --pink: #fcb4c1;
+  --pink-stitch: #e89aab;
+  --mint: #b5f0dd;
+  --mint-stitch: #8dd4c0;
+  --cream: #fff5e6;
+  --cream-stitch: #e6d5c0;
+  --teal: #a7dcc9;
+  --teal-stitch: #7fb89d;
+  --peach: #ffd4b2;
+  --peach-stitch: #e8ba96;
+  --lavender: #e5d4f0;
+  --lavender-stitch: #c8aed9;
+  --blue: #d4e5f7;
+  --blue-stitch: #b3cfe8;
+  --brown-stitch: #f4d4bc;
+
+  /* Text Colors  */
+  --text-dark: #533c2b;
+  --text-light: #a47d62;
+
+  /* Border Radius */
+  --radius: 0.75rem;
+  --radius-lg: 1.25rem;
+
+  /* Stitch Border */
+  --stitch-width: 0.2rem;
+  --stitch-dash: 1rem;
+  --stitch-gap: 1rem;
+}
+
+body {
+  font-family: "Jua", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  background-image: url("../assets/images/polka-dot-pattern.svg");
+  background-repeat: repeat;
+  background-size: 5rem auto;
+}
+
+main {
+  padding: 2.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--teal);
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+/* Stitch Border Utility Classes */
+.stitch-brown {
+  background-color: var(--cream);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--brown-stitch) 0,
+      var(--brown-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--brown-stitch) 0,
+      var(--brown-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--brown-stitch) 0,
+      var(--brown-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--brown-stitch) 0,
+      var(--brown-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.stitch-cream {
+  background-color: var(--cream);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--cream-stitch) 0,
+      var(--cream-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--cream-stitch) 0,
+      var(--cream-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--cream-stitch) 0,
+      var(--cream-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--cream-stitch) 0,
+      var(--cream-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.stitch-pink {
+  background-color: var(--pink);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--pink-stitch) 0,
+      var(--pink-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--pink-stitch) 0,
+      var(--pink-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--pink-stitch) 0,
+      var(--pink-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--pink-stitch) 0,
+      var(--pink-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.stitch-mint {
+  background-color: var(--mint);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--mint-stitch) 0,
+      var(--mint-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--mint-stitch) 0,
+      var(--mint-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--mint-stitch) 0,
+      var(--mint-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--mint-stitch) 0,
+      var(--mint-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.stitch-teal {
+  background-color: var(--teal);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--teal-stitch) 0,
+      var(--teal-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--teal-stitch) 0,
+      var(--teal-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--teal-stitch) 0,
+      var(--teal-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--teal-stitch) 0,
+      var(--teal-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.stitch-peach {
+  background-color: var(--peach);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--peach-stitch) 0,
+      var(--peach-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--peach-stitch) 0,
+      var(--peach-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--peach-stitch) 0,
+      var(--peach-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--peach-stitch) 0,
+      var(--peach-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.stitch-lavender {
+  background-color: var(--lavender);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--lavender-stitch) 0,
+      var(--lavender-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--lavender-stitch) 0,
+      var(--lavender-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--lavender-stitch) 0,
+      var(--lavender-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--lavender-stitch) 0,
+      var(--lavender-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+.stitch-blue {
+  background-color: var(--blue);
+  border: var(--stitch-width) solid transparent;
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--blue-stitch) 0,
+      var(--blue-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--blue-stitch) 0,
+      var(--blue-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--blue-stitch) 0,
+      var(--blue-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--blue-stitch) 0,
+      var(--blue-stitch) var(--stitch-dash),
+      transparent var(--stitch-dash),
+      transparent calc(var(--stitch-dash) + var(--stitch-gap))
+    );
+  background-size: 100% var(--stitch-width), 100% var(--stitch-width),
+    var(--stitch-width) 100%, var(--stitch-width) 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
+}

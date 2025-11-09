@@ -1,0 +1,118 @@
+/* Contact Page Styles */
+
+.page-header {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.page-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+form {
+  flex: 1;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+form h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 0.125rem solid var(--text-light);
+  border-radius: var(--radius);
+  font-family: "Jua", Arial, sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  background-color: var(--pink);
+  color: var(--text-dark);
+  border: 0.125rem solid var(--pink);
+  border-radius: var(--radius);
+  font-family: "Jua", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--teal);
+  border-color: var(--teal);
+  color: var(--cream);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.contact-info h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-dark);
+}
+
+.contact-info p {
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
