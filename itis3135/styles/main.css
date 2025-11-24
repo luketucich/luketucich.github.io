@@ -237,6 +237,16 @@ a {
   height: auto;
 }
 
+.img-xl {
+  width: 30rem;
+  height: auto;
+}
+
+.img-xxl {
+  width: 40rem;
+  height: auto;
+}
+
 /* Sections */
 section {
   width: 100%;
@@ -1161,7 +1171,7 @@ pre {
 }
 
 pre code {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 0.9rem;
   line-height: 1.5;
   white-space: pre;
