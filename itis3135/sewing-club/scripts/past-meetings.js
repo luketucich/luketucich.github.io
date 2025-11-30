@@ -1,4 +1,6 @@
-// Past meetings accordion using jQuery UI
+// DYNAMIC FEATURE #4: jQuery UI Accordion
+// Expandable/collapsible sections for past meeting information
+
 $(document).ready(function () {
   // Create expandable/collapsible meeting sections
   $("#meetings-accordion").accordion({

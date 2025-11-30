@@ -1,7 +1,10 @@
-// Contact form submission handler
+// DYNAMIC FEATURE #5: Contact Form Validation
+// Validates user input and handles form submission with event handling
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
+  // Handle form submission event
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -18,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show unavailable message (form keeps data so user can copy it)
     alert(
-      `We're sorry ${name}, but the contact form is currently unavailable. 
-      
+      `We're sorry ${name}, but the contact form is currently unavailable.
+
       Please contact us directly at bjjernigan@uncg.edu, or 336-843-0070. Thank you!`
     );
   });

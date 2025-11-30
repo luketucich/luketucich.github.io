@@ -1,4 +1,6 @@
-// Mobile hamburger menu functionality
+// DYNAMIC FEATURE #2: Mobile Hamburger Menu
+// Interactive responsive navigation with toggle, click-outside, and link-click handlers
+
 function setupMenu() {
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector("header nav");
@@ -8,10 +10,10 @@ function setupMenu() {
     return;
   }
 
-  // Toggle menu open/closed when hamburger is clicked
+  // INTERACTION 1: Toggle menu open/closed when hamburger is clicked
   menuToggle.onclick = function() {
     const isActive = nav.classList.contains("active");
-    
+
     if (isActive) {
       nav.classList.remove("active");
       menuToggle.classList.remove("active");
@@ -21,7 +23,7 @@ function setupMenu() {
     }
   };
 
-  // Close menu when clicking a navigation link
+  // INTERACTION 2: Close menu when clicking a navigation link
   const links = nav.querySelectorAll("a");
   links.forEach(function(link) {
     link.onclick = function() {
@@ -30,7 +32,7 @@ function setupMenu() {
     };
   });
 
-  // Close menu when clicking outside of it
+  // INTERACTION 3: Close menu when clicking outside of it
   document.onclick = function(event) {
     if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
       nav.classList.remove("active");

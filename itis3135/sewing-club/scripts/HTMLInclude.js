@@ -1,3 +1,6 @@
+// DYNAMIC FEATURE #1: Dynamic Header/Footer Loading
+// Automatically loads header and footer HTML components into each page
+
 // Load HTML component files into the page
 function loadHTML(file, elementId) {
   return fetch(file)

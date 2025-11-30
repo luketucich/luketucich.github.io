@@ -1,4 +1,6 @@
-// Gallery page tooltips using jQuery UI
+// DYNAMIC FEATURE #3: jQuery UI Tooltips
+// Displays meeting date and description when hovering over gallery images
+
 $(document).ready(function () {
   // Show date and description when hovering over gallery images
   $(".gallery-item").tooltip({
